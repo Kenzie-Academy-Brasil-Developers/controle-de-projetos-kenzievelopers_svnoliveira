@@ -12,7 +12,7 @@ const error = (
         return res.status(err.statusCode).json({ message: err.message });
     };
     console.log(err);
-    return res.status(500).json( {message: "Internal Server Error"});
+    return res.status(500).json({ message: "Internal Server Error" });
 };
 
 export default { error };

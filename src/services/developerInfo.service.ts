@@ -3,7 +3,7 @@ import { DeveloperInfo, DeveloperInfoCreate, DeveloperInfoResult } from "../inte
 import { client } from "../database";
 
 const create = async (payload: DeveloperInfoCreate): Promise<DeveloperInfo> => {
-    
+
     const queryFormat: string = format(
         `
         INSERT INTO "developerInfos" (%I)

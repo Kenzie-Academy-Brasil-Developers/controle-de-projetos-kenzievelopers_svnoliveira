@@ -15,20 +15,20 @@ type ProjectCreate = Omit<Project, "id">;
 
 type ProjectWithDeveloper = {
     projectId: number,
-	projectName: string,
-	projectDescription: string,
-	projectRepository: string,
-	startDate: Date,
-	endDate: Date | null,
-	projectDeveloperName: string
+    projectName: string,
+    projectDescription: string,
+    projectRepository: string,
+    startDate: Date,
+    endDate: Date | null,
+    projectDeveloperName: string
 };
 
 type ProjectWithDeveloperResult = QueryResult<ProjectWithDeveloper>;
 
-export { 
-    Project, 
-    ProjectResult, 
-    ProjectCreate, 
+export {
+    Project,
+    ProjectResult,
+    ProjectCreate,
     ProjectWithDeveloper,
-    ProjectWithDeveloperResult 
+    ProjectWithDeveloperResult
 };

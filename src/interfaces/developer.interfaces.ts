@@ -20,9 +20,9 @@ type DeveloperWithInfo = {
 
 type DeveloperWithInfoResult = QueryResult<DeveloperWithInfo>;
 
-export { 
+export {
     Developer,
-    DeveloperResult, 
+    DeveloperResult,
     DeveloperCreate,
     DeveloperWithInfo,
     DeveloperWithInfoResult

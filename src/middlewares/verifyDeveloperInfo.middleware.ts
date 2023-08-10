@@ -37,12 +37,12 @@ export const isValid = async (
     const developerSince = req.body.developerSince;
     const preferredOS = req.body.preferredOS;
     const validDate = new Date(req.body.developerSince);
-    const OSList = [ "Windows", "Linux", "MacOS"];
+    const OSList = ["Windows", "Linux", "MacOS"];
 
     if (developerSince && validDate instanceof Date === false) {
         throw new AppError("Invalid Date option.", 400);
-    } else if (preferredOS && !OSList.some(OS => preferredOS.includes(OS))){
-            throw new AppError("Invalid OS option.", 400);
+    } else if (preferredOS && !OSList.some(OS => preferredOS.includes(OS))) {
+        throw new AppError("Invalid OS option.", 400);
     } else {
         if (validDate) {
             res.locals.payload = {

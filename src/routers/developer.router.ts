@@ -4,12 +4,12 @@ import { verifyDeveloperInfoMiddleware, verifyDeveloperMiddleware } from "../mid
 
 const developerRouter: Router = Router();
 
-developerRouter.post("", 
-    verifyDeveloperMiddleware.emailExists, 
+developerRouter.post("",
+    verifyDeveloperMiddleware.emailExists,
     developerController.create
 );
-developerRouter.get("/:id", 
-    verifyDeveloperMiddleware.idExists, 
+developerRouter.get("/:id",
+    verifyDeveloperMiddleware.idExists,
     developerController.read
 );
 developerRouter.patch("/:id",

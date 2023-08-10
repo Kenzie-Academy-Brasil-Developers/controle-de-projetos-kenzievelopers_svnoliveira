@@ -1,6 +1,6 @@
-import { 
+import {
     Developer,
-    DeveloperResult, 
+    DeveloperResult,
     DeveloperCreate,
     DeveloperWithInfo,
     DeveloperWithInfoResult
@@ -11,17 +11,17 @@ import {
     DeveloperInfoResult,
     DeveloperInfoCreate,
 } from "./developerInfo.interfaces";
-import { 
-    Project, 
-    ProjectCreate, 
+import {
+    Project,
+    ProjectCreate,
     ProjectResult,
     ProjectWithDeveloper,
-    ProjectWithDeveloperResult 
+    ProjectWithDeveloperResult
 } from "./project.interfaces";
 
-export { 
+export {
     Developer,
-    DeveloperResult, 
+    DeveloperResult,
     DeveloperCreate,
     OS,
     DeveloperInfo,

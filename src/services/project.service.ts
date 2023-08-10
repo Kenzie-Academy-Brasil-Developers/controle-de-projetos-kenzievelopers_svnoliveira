@@ -45,9 +45,9 @@ const read = async (id: number): Promise<ProjectWithDeveloper> => {
 };
 
 const update = async (payload: Project): Promise<Project> => {
-    
+
     const queryFormat: string = format(
-    `
+        `
     UPDATE 
 	    projects 
     SET (%I) = ROW(%L)
@@ -55,8 +55,8 @@ const update = async (payload: Project): Promise<Project> => {
 	    "id" = $1
     RETURNING *;
     `,
-    Object.keys(payload),
-    Object.values(payload)
+        Object.keys(payload),
+        Object.values(payload)
     );
 
     const queryConfig: QueryConfig = {

@@ -43,9 +43,9 @@ const read = async (id: number): Promise<DeveloperWithInfo> => {
 };
 
 const update = async (payload: Developer): Promise<Developer> => {
-    
+
     const queryFormat: string = format(
-    `
+        `
     UPDATE 
 	    developers 
     SET (%I) = ROW(%L)
@@ -53,8 +53,8 @@ const update = async (payload: Developer): Promise<Developer> => {
 	    "id" = $1
     RETURNING *;
     `,
-    Object.keys(payload),
-    Object.values(payload)
+        Object.keys(payload),
+        Object.values(payload)
     );
 
     const queryConfig: QueryConfig = {
@@ -66,7 +66,7 @@ const update = async (payload: Developer): Promise<Developer> => {
     return queryResult.rows[0];
 };
 
-const destroy = async (id: number) : Promise<boolean> => {
+const destroy = async (id: number): Promise<boolean> => {
     const queryString: string = `
     DELETE FROM developers 
     WHERE "id" = $1;
@@ -74,7 +74,7 @@ const destroy = async (id: number) : Promise<boolean> => {
 
     const queryConfig: QueryConfig = {
         text: queryString,
-        values:[id]
+        values: [id]
     };
     await client.query(queryConfig);
     return true;
